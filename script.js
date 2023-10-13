@@ -21,6 +21,12 @@ board.addEventListener("click", (e) => {
   }
 });
 
+const refreshButton = document.getElementById("refresh-button");
+
+refreshButton.addEventListener("click", () => {
+  location.reload(); // Reloads the current page
+});
+
 function checkWin(player) {
   const winningCombinations = [
     [0, 1, 2],

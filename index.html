@@ -4,12 +4,17 @@
   <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body-color">
 
   <h1>Tic Tac Toe</h1>
 
-  <main class="main-center">
-    <div id="board">
+  <!-- <header class="header-style">
+
+    <img src="" alt="header image">
+  </header> -->
+
+  <main class="main-center main-padding">
+    <div id="board" class="board-out-padding">
         <div class="cell" data-index="0"></div>
         <div class="cell" data-index="1"></div>
         <div class="cell" data-index="2"></div>
@@ -23,6 +28,17 @@
   </main>
   
   <div id="message"></div>
+  
+  <!-- Refresh Button -->
+  <button id="refresh-button">Refresh Page</button>
+
   <script src="script.js"></script>
+  <script>
+    const refreshButton = document.getElementById("refresh-button");
+
+    refreshButton.addEventListener("click", () => {
+      location.reload(); // Reloads the current page
+    });
+  </script>
 </body>
 </html>
