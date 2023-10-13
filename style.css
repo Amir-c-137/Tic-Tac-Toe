@@ -56,7 +56,26 @@ background-color: #b85042ca;
     /* border: 2px solid #000; */
   }
 
-/* .padding-left-to-the-center{
-    padding-left: 1690px;
-}
-   */
+  .button-style{
+    margin: auto;
+    border-radius: 6px;
+    width: 120px;
+    height: 40px;
+    padding: 5px;
+    background-color: #ffca68a1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .button-style:hover{
+    transform: scale(1.05);
+    background-color:#ffca68;;
+  }
+
+  .button-text-style{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+  }
+
+  
+
+  
