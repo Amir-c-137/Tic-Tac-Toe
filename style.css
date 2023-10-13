@@ -1,0 +1,31 @@
+.main-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 10px;
+    text-align: center;
+  }
+  
+  .cell {
+    width: 200px;
+    height: 200px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #000;
+  }
+
+/* .padding-left-to-the-center{
+    padding-left: 1690px;
+}
+   */
