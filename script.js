@@ -1,5 +1,4 @@
 const board = document.getElementById("board");
-const message = document.getElementById("message");
 let currentPlayer = "X";
 let boardState = ["", "", "", "", "", "", "", "", ""];
 
@@ -7,14 +6,17 @@ board.addEventListener("click", (e) => {
   const cell = e.target;
   const index = cell.dataset.index;
 
-  if (boardState[index] === "" && !message.textContent) {
+  if (boardState[index] === "") {
     boardState[index] = currentPlayer;
     cell.textContent = currentPlayer;
     cell.style.pointerEvents = "none";
     if (checkWin(currentPlayer)) {
-      message.textContent = `${currentPlayer} wins!`;
+      displayGameResult(`${currentPlayer} wins!`);
+      board.style.fontSize = "36px";
     } else if (boardState.every((cell) => cell !== "")) {
-      message.textContent = "It's a draw!";
+      displayGameResult("It's a draw!");
+      board.style.fontSize = "36px";
+      
     } else {
       currentPlayer = currentPlayer === "X" ? "O" : "X";
     }
@@ -26,6 +28,19 @@ const refreshButton = document.getElementById("refresh-button");
 refreshButton.addEventListener("click", () => {
   location.reload(); // Reloads the current page
 });
+
+function displayGameResult(result) {
+  // Clear the board's content and remove styling.
+  board.innerHTML = '';
+
+  // Create a new element for displaying the result.
+  const resultElement = document.createElement('div');
+  resultElement.className = 'game-result';
+  resultElement.textContent = result;
+
+  // Append the result element to the board.
+  board.appendChild(resultElement);
+}
 
 function checkWin(player) {
   const winningCombinations = [
