@@ -2,15 +2,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 75vh;
 }
 
 .header-style{
   width: 100%;
-  height: 50px;
-  background-color: #ffca68;
+  height: 150px;
+  background-color: #ffca68a1;
+  border-radius: 100px;
 }
+
+.header-text{
+  font-size: xx-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.center-text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
 
 .body-color{
 background-color: #b85042ca;
