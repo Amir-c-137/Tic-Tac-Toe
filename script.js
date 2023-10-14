@@ -30,9 +30,6 @@ refreshButton.addEventListener("click", () => {
 });
 
 function displayGameResult(result) {
-  // Clear the board's content and remove styling.
-  board.innerHTML = '';
-
   // Create a new element for displaying the result.
   const resultElement = document.createElement('div');
   resultElement.className = 'game-result';
