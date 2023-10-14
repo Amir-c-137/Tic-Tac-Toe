@@ -16,7 +16,6 @@ board.addEventListener("click", (e) => {
     } else if (boardState.every((cell) => cell !== "")) {
       displayGameResult("It's a draw!");
       board.style.fontSize = "36px";
-      
     } else {
       currentPlayer = currentPlayer === "X" ? "O" : "X";
     }
@@ -26,16 +25,13 @@ board.addEventListener("click", (e) => {
 const refreshButton = document.getElementById("refresh-button");
 
 refreshButton.addEventListener("click", () => {
-  location.reload(); // Reloads the current page
+  location.reload();
 });
 
 function displayGameResult(result) {
-  // Create a new element for displaying the result.
   const resultElement = document.createElement('div');
   resultElement.className = 'game-result';
   resultElement.textContent = result;
-
-  // Append the result element to the board.
   board.appendChild(resultElement);
 }
 

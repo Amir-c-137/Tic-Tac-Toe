@@ -55,7 +55,12 @@ background-color: #b85042ca;
     line-height: 200px;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3 ease-in-out;
     /* border: 2px solid #000; */
+  }
+
+  .cell:hover{
+    background-color: #8da293;
   }
 
   .button-style{
